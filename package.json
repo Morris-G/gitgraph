@@ -1,0 +1,40 @@
+{
+  "name": "gitgraph.js-monorepo",
+  "private": true,
+  "version": "2.0.0-monorepo",
+  "author": "Nicolas Carlo <nicolascarlo.espeon@gmail.com>",
+  "description": "A JavaScript library to draw pretty git graphs",
+  "contributors": [
+    {
+      "name": "Fabien Bernard",
+      "email": "fabien0102@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicoespeon/gitgraph.js"
+  },
+  "license": "MIT",
+  "keywords": [
+    "git",
+    "graph",
+    "javascript"
+  ],
+  "scripts": {
+    "lerna": "lerna",
+    "build": "lerna run build --scope=@gitgraph/{core,js} --stream",
+    "watch": "lerna run watch --stream",
+    "lint:fix": "npm run lint -- --fix",
+    "pretest": "npm run build",
+    "clean": "lerna clean"
+  },
+  "devDependencies": {
+    "concurrently": "4.1.0",
+    "lerna": "3.13.1",
+    "prettier": "^2.2.0",
+    "typescript": "3.5.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
