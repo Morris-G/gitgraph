@@ -4,7 +4,7 @@ import { createG, createRect, createText } from "./svg-elements";
 export { createBranchLabel, PADDING_X, PADDING_Y };
 
 const PADDING_X = 10;
-const PADDING_Y = 5;
+const PADDING_Y = 2;
 
 function createBranchLabel(branch: Branch, commit: Commit): SVGElement {
   const rect = createRect({
@@ -12,7 +12,7 @@ function createBranchLabel(branch: Branch, commit: Commit): SVGElement {
     height: 0,
     borderRadius: branch.style.label.borderRadius,
     stroke: branch.style.label.strokeColor || commit.style.color,
-    fill: branch.style.label.bgColor,
+    fill: branch.style.label.bgColor || commit.style.color,
   });
   const text = createText({
     content: branch.name,

@@ -3,7 +3,7 @@ import { Tag } from "@gitgraph/core";
 
 export { createTag, PADDING_X };
 
-const PADDING_X = 10;
+const PADDING_X = 5;
 const PADDING_Y = 5;
 
 function createTag(tag: Tag<SVGElement>): SVGGElement {

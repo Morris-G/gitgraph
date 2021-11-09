@@ -289,7 +289,7 @@ class Template {
         display: booleanOptionOr(options.branch.label.display, true),
         color: options.branch.label.color || options.commit.color,
         strokeColor: options.branch.label.strokeColor || options.commit.color,
-        bgColor: options.branch.label.bgColor || "white",
+        bgColor: options.branch.label.bgColor || 'transparent',
         font:
           options.branch.label.font ||
           options.commit.message.font ||
@@ -315,7 +315,7 @@ class Template {
       ),
       dot: {
         color: options.commit.dot.color || options.commit.color,
-        size: options.commit.dot.size || 3,
+        size: options.commit.dot.size || 4,
         strokeWidth: numberOptionOr(options.commit.dot.strokeWidth, 0),
         strokeColor: options.commit.dot.strokeColor,
         font:

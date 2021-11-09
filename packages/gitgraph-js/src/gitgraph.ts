@@ -313,8 +313,8 @@ function createGitgraph(
           createG({
             translate: { x: -x, y: 0 },
             children: [
-              renderMessage(commit),
               ...renderBranchLabels(commit),
+              renderMessage(commit),
               ...renderTags(commit),
             ],
           }),
